@@ -20,8 +20,11 @@ def main():
             visualize_edge_coloring(G, C, max_color)
         elif choice == 2:
             G = nx.Graph()
-            G.add_nodes_from(['D','C', 'A', 'B', 'E','F'])
-            G.add_edges_from([('A', 'B'), ('A', 'C'), ('B', 'C'), ('B', 'D'), ('C', 'D'), ('A', 'D'),('D','E'),('E','B'),('A','E'),('E','C'),('E','F')])
+            # G.add_nodes_from(['D','C', 'A', 'B', 'E','F'])
+            # G.add_edges_from([('A', 'B'), ('A', 'C'), ('B', 'C'), ('B', 'D'), ('C', 'D'), ('A', 'D'),('D','E'),('E','B'),('A','E'),('E','C'),('E','F')])
+            G.add_edges_from([(1, 2), (2, 3), (3, 1), (1, 4), (4, 5)])
+            print(G.nodes())
+            print(G.edges())
             C, max_color = greedy_edge_coloring(G)
             visualize_edge_coloring(G, C, max_color)
         elif choice == 3:
