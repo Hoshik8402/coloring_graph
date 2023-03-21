@@ -1,7 +1,7 @@
 from graph import create_graph
 from greedy_edge_color import greedy_edge_coloring
 from visualize import visualize_edge_coloring
-from get_input import input_int
+from get_input import input_int_in_range
 import networkx as nx
 
 # promt user to choose option
@@ -12,7 +12,7 @@ def main():
         print("1. User input graph")
         print("2. Demo graph")
         print("3. Exit")
-        choice = input_int("Please choose your option: ")
+        choice = input_int_in_range("Please choose your option: ",1,3)
         # switch case
         if choice == 1:
             G = create_graph()
