@@ -13,6 +13,21 @@ def input_int(message):
             break
     return num
 
+#function to input integer in range?
+def input_int_in_range(message,min,max):
+    while True:
+        try:
+            num = int(input(message))
+        except ValueError:
+            print("Please enter a valid integer!")
+            continue
+        if num < min or num > max:
+            print(f"Please enter a integer in range! {min}-->{max}")
+            continue
+        else:
+            break
+    return num
+
 # Function check existence string in list
 def check_existence_string_in_list(list, string):
     for i in list:
